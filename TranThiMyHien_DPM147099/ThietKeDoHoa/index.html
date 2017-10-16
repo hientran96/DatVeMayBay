@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+		<link rel="stylesheet" type="text/css" href="css/style1.css" />
+        <link rel="stylesheet" type="text/css" href="css/style3.css" />
+		<link rel ="stylesheet" href="css/TKDHcss.css" type="text/css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script> 
+		<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript">
+		
+
+			function slideSwitch() {
+				var $active = $('#slideshow IMG.active');
+
+				if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+				// use this to pull the images in the order they appear in the markup
+				var $next =  $active.next().length ? $active.next()
+					: $('#slideshow IMG:first');
+
+				// uncomment the 3 lines below to pull the images in random order
+				
+				// var $sibs  = $active.siblings();
+				// var rndNum = Math.floor(Math.random() * $sibs.length );
+				// var $next  = $( $sibs[ rndNum ] );
+
+
+				$active.addClass('last-active');
+
+				$next.css({opacity: 0.0})
+					.addClass('active')
+					.animate({opacity: 1.0}, 1000, function() {
+						$active.removeClass('active last-active');
+					});
+			}
+
+			$(function() {
+				setInterval( "slideSwitch()", 3000 );
+			});
+
+		</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) $('#goTop').fadeIn();
+				else $('#goTop').fadeOut();
+			});
+			$('#goTop').click(function () {
+				$('body,html').animate({scrollTop: 0}, 'slow');
+			});
+		});
+		</script>
+
+</head>
+
+<body><!--container-->
+	<div class="container"><!--phần này cô chạy bằng chrome n chính xác  hơn-->
+		<header>
+		<div class="support-note"><!-- let's check browser support with modernizr -->
+				<!--span class="no-cssanimations">CSS animations are not supported in your browser</span-->
+				<span class="no-csstransforms">CSS transforms are not supported in your browser</span>
+				<!--span class="no-csstransforms3d">CSS 3D transforms are not supported in your browser</span-->
+				<span class="no-csstransitions">CSS transitions are not supported in your browser</span>
+				<span class="note-ie">Sorry, only modern browsers.</span>
+			</div>	
+		</header>
+		
+		<section class="main">
+		
+			<ul class="ch-grid">
+				<li>
+					<div class="ch-item ch-img-1">				
+						<div class="ch-info-wrap">
+							<div class="ch-info">
+								<div class="ch-info-front ch-img-1"></div>
+								<div class="ch-info-back">
+									<h3>H-air</h3>	
+								</div>	
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item ch-img-2">
+						<div class="ch-info-wrap">
+							<div class="ch-info">
+								<div class="ch-info-front ch-img-2"></div>
+								<div class="ch-info-back">
+									<h3>Hãy chọn chúng tôi</h3>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item ch-img-3">
+						<div class="ch-info-wrap">
+							<div class="ch-info">
+								<div class="ch-info-front ch-img-3"></div>
+								<div class="ch-info-back">
+									<h3>Vì bạn còn trẻ</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+		</section>
+	</div>
+	<!--end container-->
+	<!--than-->
+	<div id="than">
+		<div><img src="img/logo.png" alt="logo" style="float:left;margin-left:20px;"/></div>
+		<div id="menu"style="margin-top:-160px;">
+		  <ul>
+			<li><a href="#" style="color:#990000;font-size:20px;">Giới thiệu</a>
+				<ul class="sub-menu" style="font-style:italic;font-size:16px;">
+				<li><a href="sub-index.html"style="color:#006600;">H Air</a></li>
+				<li><a href="sub-index.html"style="color:#006600;">Độ uy tín</a></a></li>
+				<li><a href="sub-index.html"style="color:#006600;">Nhân Viên</a></li>
+			  </ul>
+			</li>
+			<li><a href="#" style="color:#990000;font-size:20px;">Khách sạn</a>
+			<ul class="sub-menu"style="font-style:italic;font-size:16px;">
+				<li><a href="sub-index.html"style="color:#006600;">Tiện nghi</a></li>
+				<li><a href="sub-index.html"style="color:#006600;">Giá rẻ</a></li>
+			  </ul>
+			</li>
+			<li><a href="#" style="color:#990000;font-size:20px;">Bạn muốn trợ giúp?</a></li>
+			<li><a href="#" style="color:#990000;font-size:20px;">Tin Khuyến mãi</a>
+			  <ul class="sub-menu"style="font-style:italic;font-size:16px;">
+				<li><a href="sub-index.html"style="color:#006600;">Sự kiện</a></li>
+				<li><a href="sub-index.html"style="color:#006600;">Săn vé mùa hè</a></a></li>
+				<li><a href="sub-index.html	"style="color:#006600;">Địa điểm Hot</a></li>
+			  </ul>
+			</li>
+			
+			<li><a href="#" style="color:#990000;font-size:20px;">Liên hệ</a>
+			  <ul class="sub-menu"style="font-style:italic;font-size:16px;">
+				<li><a href="sub-index.html"style="color:#006600;">Gọi ngay</a></li>
+				<li><a href="sub-index.html"style="color:#006600;">Để lại lời nhắn</a></li>
+				<li><a href="sub-index.html"style="color:#006600;">Địa chỉ Đại lý</a></li>
+			  </ul>
+			</li>
+			
+			
+			
+		  </ul>
+		</div>
+		<!--content-->
+		<div id="content" style="margin-top:150px;">
+			<div  class="wrapfrm">
+				<form action="tim-ve" method="POST" class="black" name="frmsearchair" id="frmsearchair">
+					<aside id="vemaybay" class="first searchblock">    
+						<div class="first-content">
+							<header>  
+								<p class="col-xs-6" style="padding-left:20%;font-weight:bold;font-size:18px;float:left;">
+									<input name="loaive" id="loaive_o" value="1" onclick="disabledate(0)" type="radio"  class="loaive" checked="checked" />
+									<input name="trip_select_hidden" id="trip_select_hidden" type="hidden" value=""/>						
+									<label>Một chiều</label>
+								</p>       							
+								<p class="col-xs-6"style="padding-right:20%;font-weight:bold;font-size:18px;float:right;">
+									<input name="loaive" id="loaive_r" onclick="disabledate(1);"  value="0"  type="radio"  class="loaive" />
+									<label>Khứ hồi</label>
+								</p>
+								<div style="clear:both"></div>
+							</header>
+							<div class="content_vemaybay">
+								<div class="content_vemaybay_left">
+									<div class="content" style="margin:auto;padding-left:110px;padding-top:10px;">
+										<div class="floatleft des col-xs-6">
+											<label>Ðiểm đi &nbsp; </label>
+											<input type="text" id="departCity" class="city" name="departCity" value="Hồ Chí Minh" />
+											<input type="hidden" id="departCity_hidden" name="departCity_hidden" value="8785,Hồ Chí Minh" />
+										</div>
+										<div class="floatleft reshd col-xs-6" style="padding-top:10px;">
+											<label>Điểm đến</label>
+											<input type="text" id="returnCity" class="city" name="returnCity" value="Hà Nội"/>
+											<input type="hidden" id="returnCity_hidden" name="returnCity_hidden" value="8772,Hà Nội"/>
+										</div>
+										<div style="clear:both"></div>
+															  
+									</div>      
+									<div class="content1"style="padding-top:20px;">
+										<div class="floatleft rescheckin col-xs-6" id="ngaydi"style="float:left;margin-left:20px;">
+											<label> Đi</label>		
+											<input type="text" name="flights-checkin" id="flights-checkin" class="date depDate" value="" placeholder="Ngày đi" />	   
+										</div>
+										<div class="floatleft res col-xs-6" id="ngayve"style="float:right;margin-right:30px;">
+											<label>Về</label> 
+											<input type="text" name="flights-checkout"  id="flights-checkout" class="date retDate" value="" placeholder="Ngày về" />						
+										</div>
+										<div style="clear:both"></div>
+									</div>
+									<div class="content"style="padding-left:10%;padding-top:20px;">  
+										<div class="floatleft aut col-xs-4" style="float:left;">
+											<label >Người lớn (>12T)</label>                      
+											<p class="quantity" style="padding-left:30px;" >
+												<label>
+													<select name="adt_nd" >
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+														<option value="8">8</option>
+														<option value="9">9</option>
+														<option value="10">10</option>									 
+													</select>
+												</label>  
+											</p>      
+										</div>
+										<div class="floatleft chd col-xs-4" style="float:left;padding-left:40px;">
+											<label>Trẻ em (2-11T)</label>   
+											<p class="quantity" style="padding-left:26px;">
+												<label>
+													<select name="chd_nd">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+														<option value="8">8</option>
+														<option value="9">9</option>
+														<option value="10">10</option>			  
+														</select>
+												</label> 
+											</p>
+										</div>
+										<div class="floatleft inf col-xs-4" style="text-align:center;">        
+											<label >Baby(&lt;2T)</label> 
+											<p class="quantity"> 
+												<label>
+													<select name="INF">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>										 
+													</select> 
+												</label>  
+											</p>
+										</div>
+									<div style="clear:both"></div>
+									</div>
+									<div class="content_vemaybay_right" style="padding-left:36%;margin-top:45px;">  
+										<div class="butonsearch">
+											<input type="submit"  id="cmdsearch" name="cmdsearch" value="TÌM CHUYẾN BAY"/>       
+										</div> 
+									</div> 
+								</div> 
+								<input type="hidden" name="price" id="price" value="" />
+								<input type="hidden" name="dt" id="dt" value="" />
+								<input  type="hidden" name="qt" value="0"/>
+								<input type="hidden" id="departCity_hidden1" name="departCity_hidden1" value="SGN" />
+								<input type="hidden" id="returnCity_hidden1" name="returnCity_hidden1" value="HAN" />
+							</div>   
+						</div>  
+					</aside>
+				</form> 
+				<div id="video">
+					<iframe style="margin-left:650px;margin-top:-300px;" width="70%" src="https://www.youtube.com/embed/hsI7Vq73eW0?rel=0&autoplay=1 " frameborder="0" allowfullscreen></iframe>	
+				</div>
+			</div> 
+			
+			<div id="slideshow" >
+				<img src="img/nen.png" alt="Slideshow Image 1" class="active" />
+				<img src="img/nen1.png" alt="Slideshow Image 2" />
+				<img src="img/nen2.png" alt="Slideshow Image 3" />
+				<img src="img/nen3.png" alt="Slideshow Image 4" />
+			</div>	
+			
+
+		</div><!--end of content-->
+		
+		<!-- this will work with any number of images -->
+		<!-- set the active class on whichever image you want to show up as the default 
+		(otherwise this will be the last image) -->
+
+		<div class="thanweb"style="width:100%;text-align:center;">
+			<div id="homnay">
+				<p style="font-family:Papyrus;color:#a1141b;margin-top:220px;"><a >HÔM NAY ĐI ĐÂU</a></p>
+				<div class="HNDD">
+					<div id="HNhomnay"style="margin-left:2%;float:left;">
+						<div id="hanoi1" class="HN">
+							<a href="http://dulich.dantri.com.vn/du-lich/ho-guom-quyen-ru-khi-vao-thu-20151008065413349.htm"target="_blank"><img src="img/hanoi.png" alt="hanoi"width ="30%" height="30%" /></a>
+						</div>
+						<div id="homnay2" class="HN"style=" padding-left:5%;">
+							<a href="http://news.zing.vn/mien-tay-tuyet-dep-trong-trien-lam-anh-mua-nuoc-noi-post698005.html"target="_blank"><img  src="img/homnaydidau2.jpg" alt="homnaydidau2"width ="30%" height="30%"/></a>
+						</div>
+					</div>
+					<div id="homnay1" class="HN"style="margin-left:25%;margin-top:2%;position:absolute;">
+						<a href="https://www.vietravel.com/en/du-lich-bang-hinh-anh/ron-rang-chum-tour-le-30-thang-4-va-1-thang-5-v1576.aspx"target="_blank"><img src="img/homnaydidau1.jpg" alt="homnaydidau1" width ="40%" height="40%"/>	</a>
+					</div>
+					<div id="homnay3" class="HN"style="margin-left:60%;position:absolute;">
+						<a href="https://video.vnexpress.net/tin-tuc/quoc-te/kuala-lumpur/ve-dep-khac-biet-cua-kuala-lumpur-giua-ngay-va-dem-3558397.html" target="_blank"><img src="img/homnaydidau3.jpg" alt="homnaydidau3" width ="60%" height="70%"/></a>
+					</div>
+				</div>
+			</div>
+			<div id="News" class="News1"style="position:absolute;margin-top:18%;text-align:center;margin-right:-300px;margin-left:60px;">
+				<p style="font-family:Papyrus;color:#a1141b;margin-left:-350px;"><a >NEWS</a></p>
+				<div >
+					<div id="news"class="block">
+						<a href="http://chieutour.com/san-pham/tour-kham-pha-kinh-kong-dao-dau-lau-tai-quang-binh-gia-re.html"target="_blank" ><img src="img/news.png" alt="news"/></a>
+						<p ><a href="http://chieutour.com/san-pham/tour-kham-pha-kinh-kong-dao-dau-lau-tai-quang-binh-gia-re.html"style="font-family:Times New Roman;color:#880622;text-decoration:none;font-size:14px;">Du lịch Quảng Bình khám phá đảo đầu lâu </a></p>
+					</div>
+					<div id="news1" class="block">
+						<a href="http://kenh14.vn/mua-hoa-anh-dao-ve-ban-se-uoc-minh-den-ngay-nhat-han-de-ngam-nhung-canh-dep-nay-20160329144927475.chn"target="_blank" ><img src="img/news1.png" alt="news1" /></a>
+						<p><a href="http://kenh14.vn/mua-hoa-anh-dao-ve-ban-se-uoc-minh-den-ngay-nhat-han-de-ngam-nhung-canh-dep-nay-20160329144927475.chn"style="font-family:Times New Roman;color:#880622;text-decoration:none;font-size:14px;"> Ba thành phố  anh đào ngập hoa tháng 3</a></p>
+					</div>
+					<div id="news2"class="block" >
+						<a href="http://dulich.vnexpress.net/photo/anh-video/khu-vuon-no-day-hoa-man-di-chang-muon-ve-o-ibaraki-3554901.html"target="_blank" ><img src="img/news2.jpg" alt="news2" /></a>
+						<p><a href="http://dulich.vnexpress.net/photo/anh-video/khu-vuon-no-day-hoa-man-di-chang-muon-ve-o-ibaraki-3554901.html"style="font-family:Times New Roman;color:#880622;text-decoration:none;font-size:14px"> Khu vườn nở đầy hoa mận đi chẳng muốn về ở Ibaraki</a></p>
+					</div>
+					<div id="news3" class="block">
+						<a href="http://dulich.vnexpress.net/photo/anh-video/cuoc-song-cua-nha-giau-o-dubai-3552261.html"target="_blank" ><img src="img/news3.jpg" alt="news3" /></a>
+						<p><a href="http://dulich.vnexpress.net/photo/anh-video/cuoc-song-cua-nha-giau-o-dubai-3552261.html"style="font-family:Times New Roman;color:#880622;text-decoration:none;font-size:14px;"> Cuộc sống của nhà giàu ở Dubai</a></p>
+					</div>
+				</div>
+			</div>
+			<div id="sanvehot"class="News1">
+				<p style="font-family:Papyrus;color:#a1141b;"><a >SĂN VÉ HOT</a></p>
+				<div class="container" style="margin-top:100px;">
+					<div id="vitrine">
+						<div ><img class="img-circle" src="img/sanve.png"></div>
+						<div ><img class="img-circle" src="img/sanve1.png"></div>
+						<div ><img class="img-circle" src="img/sanve2.png"></div>
+						<div ><img class="img-circle" src="img/sanve3.png"></div>
+						<div><img class="img-circle" src="img/sanve4.png"></div>
+						<div ><img class="img-circle" src="img/sanve5.png"></div>
+					</div>
+					<script src="js/jquery-1.11.3.min.js"></script>
+					<script src="js/jQuery.vitrine.js"></script>
+					<script>
+						$('#vitrine').vitrine({color:'#fff',loop: true});
+					</script>
+				</div>
+				<div id="marque" >
+					<marquee  onmouseover="this.stop();" onmouseout="this.start();" behavior="scroll" direction="left"  scrollamount=5 >
+						<p style="font-family:Times New Roman;font-weight:bold;margin-top:150px;"><a href="sub-index.html"style="text-decoration:none;color:black;">Giờ vàng Giá Hot đặt vé ngay giá chỉ </a></p>
+						<p class="nhapnhay" style="font-weight:bold;font-style: italic; font-family:Times New Roman;margin-left:180px;"><a href="sub-index.html" style="text-decoration:none;color:red;">Từ 99k</a></p>
+					</marquee>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<!--end than-->
+	 <div id="goTop"><img src="img/gohome.png" alt="home" /></div>
+	 <!--chan-->
+	<div id="chan" >
+		<div id="footer" style="word-wrap:break-word;">
+			<p><img src="img/logo.png" alt="logo" style="float:left;margin-left:20px;"/></p>
+			<ul style="margin-left:25%;">
+				<li><a href="#"style="color:#e21087;font-size:20px;">Tuyển dụng</a>
+					<ul class="subtuyendung" style="font-size:16px;">
+						<li><a href="#">Vị trí</a></li>
+						<li><a href="#">Điều kiện</a></li>
+						<li><a href="#">Mức lương</a></li>
+					</ul>
+				</li>
+				<li><a href="#"style="color:#e21087;font-size:20px;">Hướng dẫn đặt vé</a>
+					<ul class="subhuongdandatve"style="font-size:16px;">
+						<li><a href="#">Đặt vé online</a></li>
+						<li><a href="#">Đặt vé qua hotline</a></li>
+					</ul>
+				</li>
+				<li><a href="#"style="color:#e21087;font-size:20px;">Hướng dẫn thanh toán</a>
+					<ul class="subhuongdanthanhtoan"style="font-size:16px;">
+						<li><a href="#">Thanh toán trực tuyến</a></li>
+						<li><a href="#">Thanh toán tại nhà</a></li>
+						<li><a href="#">Chuyển khoản</a></li>
+					</ul>
+				</li>
+				<li><a href="#"style="font-size: 120%;color:#e21087;font-size:20px;">Tại sao chọn chúng tôi</a>
+					<ul class="subtaisaonenchonchungtoi"style="font-size:16px;">
+						<li><a href="#">Thông tin về chúng tôi</a></li>
+						<li><a href="#">Đội ngũ nhân viên</a></li>
+						<li><a href="#">Giá vé cạnh tranh</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class ="end">
+			<div style="margin-left:330px;"><hr  width="68%"/></div>
+			<div style=" margin-top: 180px;word-wrap: break-word;">
+				<p style="margin-left:20px;"><a href="https://www.google.com/maps/place/18+Ung+V%C4%83n+Khi%C3%AAm,+M%E1%BB%B9+Xuy%C3%AAn,+Tp.+Long+Xuy%C3%AAn,+An+Giang,+Vi%E1%BB%87t+Nam/@10.3766449,105.4294482,17z/data=!3m1!4b1!4m5!3m4!1s0x310a72e0163bdd53:0x1860718c6c89d69a!8m2!3d10.3766396!4d105.4316369" target="_blank" title="Đại học An Giang" style="font-style:italic;color:#e21087;text-decoration:none;" >Đại lý vé máy bay H Air </a></p> 
+				<p style="margin-left:20px;"><a href="https://www.google.com/maps/place/18+Ung+V%C4%83n+Khi%C3%AAm,+M%E1%BB%B9+Xuy%C3%AAn,+Tp.+Long+Xuy%C3%AAn,+An+Giang,+Vi%E1%BB%87t+Nam/@10.3766449,105.4294482,17z/data=!3m1!4b1!4m5!3m4!1s0x310a72e0163bdd53:0x1860718c6c89d69a!8m2!3d10.3766396!4d105.4316369" target="_blank" title="Đại học An Giang" style="font-style:italic;color:#e21087;text-decoration:none;" >Đ/C:Nguyễn Du, Phường Mỹ Bình, TP Long Xuyên, Tỉnh An Giang</a></p>			
+			</div>
+			<div id="icon">
+				<p>
+					<a href="https://www.facebook.com/vn.VietnamAirlines/?fref=ts" target="_blank" title="facebook" ><img style="margin-bottom:2%;" src="img/facebook.png" alt="facebook"/></a>
+					<a href="https://translate.google.com/" target="_blank" title="g+" ><img style="margin-bottom:2%;"src="img/g+.png" alt="g+"/></a>
+					<a href="http://vietjetair.com/Sites/Web/vi-VN/Home" target="_blank" title="line" ><img src="img/line.png" alt="line"/></a>
+					<a href="https://youtu.be/NieLZzuA1OQ" target="_blank" title="youtube" ><img src="img/youtube.png" alt="youtube"/></a>
+				</p>
+			</div>	
+		</div>
+	</div><!--chan-->
+</body>
+</html>

@@ -1,0 +1,6 @@
+1250
+1500
+-than web 800
+-chan 300
+-menu 100
+-content:300
